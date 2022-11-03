@@ -13,6 +13,12 @@
     }
   }
 }
+.subtitle {
+  font-family: 'DM Serif Display';
+  font-size: em(36);
+  line-height: math.div(49, 36);
+  color: $titleColor;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
