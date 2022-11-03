@@ -1,4 +1,30 @@
 //====================================================================================================
+.header {
+  // .header__container
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: em(15);
+    margin-top: em(50);
+  }
+
+  // .header__logo
+
+  &__logo {
+  }
+
+  // .header__nav
+
+  &__nav {
+  }
+
+  // .header__sign-up
+
+  &__sign-up {
+  }
+}
 
 //====================================================================================================
 
