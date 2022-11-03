@@ -1,0 +1,29 @@
+.client {
+  height: 200px;
+  display: flex;
+  align-items: center;
+
+  // .client__container
+
+  &__container {
+    width: 100%;
+  }
+
+  // .client__slider
+
+  &__slider {
+  }
+
+  // .client__swiper
+
+  &__swiper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .client__slide
+
+  &__slide {
+    align-self: center;
+  }
+}
