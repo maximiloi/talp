@@ -1,0 +1,126 @@
+.offer {
+  margin-bottom: em(10);
+  // .offer__container
+
+  &__container {
+    display: flex;
+    margin-top: em(120);
+  }
+
+  // .offer__inner
+
+  &__inner {
+    &:not(:last-child) {
+      margin-right: em(40);
+    }
+  }
+
+  // .offer__title
+
+  &__title {
+    font-family: 'DM Serif Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: em(64);
+    line-height: math.div(80, 64);
+    color: $titleColor;
+  }
+
+  // .offer__text
+
+  &__text {
+    margin-top: em(32);
+    max-width: rem(576);
+    font-size: em(18);
+    line-height: math.div(28, 18);
+  }
+
+  // .offer__box
+
+  &__box {
+    margin-top: em(82);
+  }
+
+  // .offer__pics
+
+  &__pics {
+    height: 420px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 18px 20px;
+    grid-template-areas:
+      'pic1 pic3'
+      'pic2 pic3';
+
+    & img {
+      border-radius: em(8);
+    }
+  }
+  &__pic1 {
+    width: 225px;
+    height: 150px;
+    grid-area: pic1;
+  }
+  &__pic2 {
+    grid-area: pic2;
+    width: 225px;
+    height: 221px;
+    margin-top: em(-45);
+  }
+  &__pic3 {
+    grid-area: pic3;
+    width: 200px;
+    height: 350px;
+    margin-top: em(90);
+  }
+}
+.search-tour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #efefef;
+  box-shadow: 0px 23px 48px rgba(201, 201, 201, 0.1);
+  border-radius: 8px;
+  padding: em(15);
+  gap: em(21);
+
+  // .search-tour__box
+
+  &__box {
+    flex: 1 1 25%;
+    padding: em(10) em(15);
+    box-shadow: 0px 9px 20px -4px rgba(255, 116, 36, 0.09);
+    border-radius: 8px;
+  }
+
+  // .search-tour__title
+
+  &__title {
+    font-weight: 300;
+    font-size: em(12);
+    line-height: math.div(18, 12);
+    color: $blackColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .search-tour__select
+
+  &__select {
+    font-weight: 500;
+    font-size: em(14);
+    line-height: math.div(21, 14);
+    color: $titleColor;
+  }
+
+  // .search-tour__button
+
+  &__button {
+    flex: 1 1 25%;
+    text-align: center;
+    padding: 24px;
+  }
+}
