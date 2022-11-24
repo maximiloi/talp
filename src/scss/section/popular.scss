@@ -1,0 +1,118 @@
+.popular {
+  // .popular__container
+
+  &__container {
+    margin-top: em(150);
+  }
+
+  // .popular__wrapper
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .popular__title
+
+  &__title {
+  }
+
+  // .popular__button--wrapper
+
+  &__button--wrapper {
+  }
+
+  // .popular__button
+
+  &__button {
+    padding: 14.5px 22px;
+  }
+
+  // .popular__list
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: em(60);
+  }
+
+  // .popular__card
+
+  &__card {
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $titleColor;
+  font-size: em(18);
+  line-height: em(18);
+  letter-spacing: 0.04em;
+
+  // .card__img
+
+  &__img {
+  }
+
+  // .card__description
+
+  &__description {
+    margin-top: em(-70);
+    padding: em(20);
+    width: em(310);
+    background: $whiteColor;
+    box-shadow: 0px 24px 49px rgba(185, 217, 251, 0.19);
+    border-radius: 8px;
+  }
+
+  // .card__name
+
+  &__name {
+    font-family: 'DM Serif Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(26);
+    line-height: rem(36);
+  }
+
+  // .card__inner
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin-top: em(16);
+  }
+
+  // .card__star
+
+  &__star {
+    margin: 0px 10px 0px 0px;
+  }
+
+  // .card__rating
+
+  &__rating {
+    margin: 0px 10px 0px 0px;
+  }
+
+  // .card__rating--description
+
+  &__rating--description {
+  }
+
+  // .card__price
+
+  &__price {
+    width: 100%;
+    text-align: right;
+    font-weight: 500;
+    font-size: em(24);
+    line-height: em(24);
+    &::before {
+      content: '$';
+    }
+  }
+}

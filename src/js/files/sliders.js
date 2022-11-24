@@ -19,7 +19,7 @@ EffectFade, Lazy, Manipulation
 // Базовые стили
 import '../../scss/base/swiper.scss';
 // Полный набор стилей из scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
+// import '../../scss/libs/swiper.scss';
 // Полный набор стилей из node_modules
 // import 'swiper/css';
 
@@ -46,18 +46,18 @@ function initSliders() {
 
   // Перечень слайдеров
   if (document.querySelector('.swiper')) {
-    new Swiper('.swiper', {
+    new Swiper('.about-us__slider', {
       // Подключаем модули слайдера
       // для конкретного случая
       modules: [Navigation, Autoplay],
       effect: 'fade',
-      //   autoplay: {
-      //     delay: 3000,
-      //     disableOnInteraction: false,
-      //   },
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
       observer: true,
       observeParents: true,
-      slidesPerView: 4,
+      slidesPerView: 1,
       spaceBetween: 0,
       autoHeight: true,
       speed: 800,
@@ -73,8 +73,8 @@ function initSliders() {
       //},
       // Arrows
       navigation: {
-        nextEl: '.about__more .more__item_next',
-        prevEl: '.about__more .more__item_prev',
+        nextEl: '.about-us__nav .about-us__nav--next',
+        prevEl: '.about-us__nav .about-us__nav--prev',
       },
       /*
 			breakpoints: {

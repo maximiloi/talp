@@ -16,10 +16,20 @@
     display: flex;
   }
 
+  // .about-us__inner
+
+  &__inner {
+    align-self: center;
+    &:first-child {
+      margin-right: em(108);
+    }
+  }
+
   // .about-us__slider
 
   &__slider {
-    margin-right: em(108);
+    position: relative;
+    width: em(560);
   }
 
   // .about-us__swiper
@@ -35,10 +45,40 @@
     }
   }
 
-  // .about-us__inner
+  // .about-us__nav
 
-  &__inner {
-    align-self: center;
+  &__nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: em(160);
+    height: em(74);
+    border-top-left-radius: em(8);
+    box-shadow: 4px 11px 28px rgba(235, 235, 235, 0.31);
+    background: $whiteColor;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    &--prev,
+    &--next {
+      width: em(80);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid $orangeColor;
+      opacity: 0.5;
+      border-radius: 50%;
+      transition: opacity 0.3s ease 0s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &--prev {
+      transform: rotate(180deg);
+    }
   }
 
   // .about-us__subtitle
