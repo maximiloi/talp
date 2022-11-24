@@ -1,0 +1,99 @@
+.stories {
+  // .stories__container
+
+  &__container {
+    margin-top: em(150);
+  }
+
+  // .stories__wrapper
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .stories__title
+
+  &__title {
+  }
+
+  // .stories__button--wrapper
+
+  &__button--wrapper {
+  }
+
+  // .stories__button
+
+  &__button {
+    padding: 14.5px 22px;
+  }
+
+  // .stories__button--invert
+
+  &__button--invert {
+    color: $orangeColor;
+    background-color: $whiteColor;
+    border: 1px solid $orangeColor;
+  }
+
+  // .stories__cards
+
+  &__cards {
+    margin-top: em(65);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .stories__card
+
+  &__card {
+    position: relative;
+    width: em(272);
+    color: $whiteColor;
+  }
+
+  // .stories__cover
+
+  &__cover {
+    border-radius: em(8);
+  }
+
+  // .stories__box
+
+  &__box {
+    position: absolute;
+    width: em(272);
+    padding: em(20);
+    bottom: 0;
+  }
+
+  // .stories__tag
+
+  &__tag {
+    font-size: em(12);
+    line-height: em(18);
+    background: rgba(175, 175, 175, 0.7);
+    backdrop-filter: blur(2px);
+    border-radius: 8px;
+    padding: 5px 13px;
+  }
+
+  // .stories__name
+
+  &__name {
+    font-family: 'DM Serif Display';
+    font-size: em(20);
+    line-height: em(20);
+    margin-top: em(5);
+  }
+
+  // .stories__date
+
+  &__date {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: em(8);
+  }
+}
