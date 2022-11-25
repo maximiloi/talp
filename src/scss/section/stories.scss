@@ -3,6 +3,7 @@
 
   &__container {
     margin-top: em(150);
+    margin-bottom: em(150);
   }
 
   // .stories__wrapper
@@ -51,6 +52,17 @@
     position: relative;
     width: em(272);
     color: $whiteColor;
+    border-radius: em(8);
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 56.72%, rgba(0, 0, 0, 0.3) 80.06%);
+      border-radius: em(8);
+    }
   }
 
   // .stories__cover
@@ -63,6 +75,7 @@
 
   &__box {
     position: absolute;
+    z-index: 2;
     width: em(272);
     padding: em(20);
     bottom: 0;
@@ -85,7 +98,7 @@
     font-family: 'DM Serif Display';
     font-size: em(20);
     line-height: em(20);
-    margin-top: em(5);
+    margin-top: em(8);
   }
 
   // .stories__date
