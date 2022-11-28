@@ -1,0 +1,122 @@
+.search-tour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #efefef;
+  box-shadow: 0px 23px 48px rgba(201, 201, 201, 0.1);
+  border-radius: 8px;
+  padding: em(15);
+  gap: em(21);
+
+  // .search-tour__box
+
+  &__box {
+    flex: 1 1 25%;
+    padding: em(10) em(15);
+    box-shadow: 0px 9px 20px -4px rgba(255, 116, 36, 0.09);
+    border-radius: 8px;
+
+    & .select {
+      position: relative;
+      display: block;
+    }
+    & .select__head {
+      font-weight: 500;
+      font-size: 0.875em;
+      line-height: 1.5;
+      color: #242424;
+      cursor: pointer;
+    }
+    & .select__list {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+      border-radius: em(8);
+      margin-top: 5px;
+      width: 140px;
+      max-height: 205px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      z-index: 100;
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      color: #424348;
+      scrollbar-color: dark;
+      scrollbar-width: thin;
+      overscroll-behavior: contain;
+      transition: opacity 1s ease 0s;
+    }
+    & .select__list::-webkit-scrollbar {
+      width: 7px;
+      background-color: #f8f9fa;
+      padding: 5px;
+    }
+    & .select__list::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: #d9d9d9;
+    }
+    & .select__list .select__item {
+      position: relative;
+      border-top: 1px solid rgba(224, 229, 231, 0.5);
+      padding: 10px 15px;
+      cursor: pointer;
+      list-style-type: none;
+    }
+    & .select__list .select__item:hover {
+      background-color: rgba(224, 229, 231, 0.5);
+    }
+  }
+
+  // .search-tour__title
+
+  &__title {
+    position: relative;
+    font-weight: 300;
+    font-size: em(12);
+    line-height: math.div(18, 12);
+    color: $blackColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::after {
+      width: 10px;
+      height: 6px;
+      background: #fff url('@img/fonticons/s-select-arrow.svg') no-repeat center / cover;
+      position: absolute;
+      right: 0;
+      bottom: 50%;
+      transform: translateY(50%);
+      content: '';
+      display: block;
+      transition: 0.2s ease-in;
+    }
+
+    &.open::after {
+      transform: translateY(50%) rotate(180deg);
+    }
+  }
+
+  // .search-tour__select
+
+  &__select {
+    font-weight: 500;
+    font-size: em(14);
+    line-height: math.div(21, 14);
+    color: $titleColor;
+  }
+
+  // .search-tour__button
+
+  &__button {
+    flex: 1 1 25%;
+    text-align: center;
+    padding: 19.5px 22.5px;
+  }
+}
