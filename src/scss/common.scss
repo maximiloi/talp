@@ -1,16 +1,52 @@
 // Заголовки, общие БЄМ блоки и проче...
+// .button {
+//   color: $whiteColor;
+//   background-color: $orangeColor;
+//   padding: 18px 32px;
+//   font-weight: 500;
+//   border-radius: em(8);
+//   transition: color 0.3s ease 0s;
+//   @media (any-hover: hover) {
+//     &:hover {
+//       color: $mainColor;
+//       cursor: pointer;
+//     }
+//   }
+// }
 .button {
-  color: $whiteColor;
-  background-color: $orangeColor;
-  padding: 18px 32px;
-  font-weight: 500;
+  position: relative;
+  padding: 13.5px 32px;
   border-radius: em(8);
-  transition: color 0.3s ease 0s;
-  @media (any-hover: hover) {
-    &:hover {
-      color: $mainColor;
-      cursor: pointer;
-    }
+  border-style: none;
+  overflow: hidden;
+  color: $whiteColor;
+
+  background-color: $orangeColor;
+  transition: background-color 0.3s ease 0s;
+}
+
+.button:hover {
+  filter: sepia(25%);
+  // background-color: #719a57;
+}
+
+.button__ripple {
+  position: absolute;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+
+  animation: ripple 2s ease forwards;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(20);
+    opacity: 0;
   }
 }
 .subtitle {

@@ -27,7 +27,7 @@
   // .stories__button
 
   &__button {
-    padding: 14.5px 22px;
+    padding: 13.5px 23px;
   }
 
   // .stories__button--invert
@@ -36,6 +36,11 @@
     color: $orangeColor;
     background-color: $whiteColor;
     border: 1px solid $orangeColor;
+
+    & .button__ripple {
+      background-color: rgba(255, 116, 36, 0.3);
+      border: 2px solid rgba(255, 116, 36, 0.5);
+    }
   }
 
   // .stories__cards
