@@ -51,10 +51,21 @@
   font-size: em(18);
   line-height: em(18);
   letter-spacing: 0.04em;
+  border-radius: 8px;
+  cursor: pointer;
 
   // .card__img
 
   &__img {
+    border-radius: 8px;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+      & .card__description {
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+      }
+    }
   }
 
   // .card__description
@@ -66,6 +77,13 @@
     background: $whiteColor;
     box-shadow: 0px 24px 49px rgba(185, 217, 251, 0.19);
     border-radius: 8px;
+
+    transition: all 0.5s ease 0s;
+
+    // &:hover {
+    //   width: 100%;
+    //   box-shadow: 0px 27px 72px rgba(10, 176, 255, 0.15);
+    // }
   }
 
   // .card__name
