@@ -73,8 +73,8 @@ function initSliders() {
       //},
       // Arrows
       navigation: {
-        nextEl: '.about-us__nav .about-us__nav--next',
-        prevEl: '.about-us__nav .about-us__nav--prev',
+        nextEl: '.about-us__nav .about-us__nav-next',
+        prevEl: '.about-us__nav .about-us__nav-prev',
       },
       /*
 			breakpoints: {
