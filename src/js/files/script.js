@@ -37,13 +37,17 @@ document.addEventListener('click', function (e) {
     }, timeOut);
   }
 
+  if (!targetItem.closest('.select__item') && document.querySelector('.search-tour__title.open') && document.querySelector('.select__head.open')) {
+    document.querySelector('.select__head.open').nextElementSibling.style.display = 'none';
+    document.querySelector('.select__head.open').classList.remove('open');
+  }
+
   if (targetItem.closest('.select__head')) {
     if (targetItem.classList.contains('open')) {
       targetItem.classList.remove('open');
       targetItem.parentNode.previousElementSibling.classList.remove('open');
       targetItem.nextElementSibling.style.display = 'none';
     } else {
-      // document.querySelector('.search-tour__title').classList.remove('open');
       targetItem.classList.add('open');
       targetItem.parentNode.previousElementSibling.classList.add('open');
       targetItem.nextElementSibling.style.display = 'block';
@@ -57,31 +61,3 @@ document.addEventListener('click', function (e) {
     targetItem.parentElement.style.display = 'none';
   }
 });
-
-// document.querySelector('.select').addEventListener('click', function () {
-//   if (document.querySelector(this).classList.contains('open')) {
-//     document.querySelector(this).classList.remove('open');
-//     document.querySelector(this).nextElementSibling.fadeOut();
-//   } else {
-//     document.querySelector('.select__head').classList.remove('open');
-//     document.querySelector('.select__list').fadeOut();
-//     document.querySelector(this).classList.add('open');
-//     document.querySelector(this).nextElementSibling.fadeIn();
-//   }
-// });
-
-// document.querySelector('.select').addEventListener('click', '.select__item', function () {
-//   document.querySelector('.select__head').classList.remove('open');
-//   document.querySelector(this).parent().fadeOut();
-//   document.querySelector(this).parent().previousElementSibling.text(document.querySelector(this).text());
-//   document.querySelector(this).parent().previousElementSibling.previousElementSibling.val(document.querySelector(this).text());
-// });
-
-// document.querySelector(document).click(function (e) {
-//   if (!document.querySelector(e.target).closest('.select').length) {
-//     document.querySelector('.select__head').classList.remove('open');
-//     document.querySelector('.select__list').fadeOut();
-//   }
-// });
-
-// https://only-to-top.ru/blog/coding/2018-11-17-stilizaciya-select.html
